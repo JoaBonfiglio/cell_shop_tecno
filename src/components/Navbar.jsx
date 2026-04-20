@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { ShoppingCart, Search, Zap, Menu, X, Headphones } from 'lucide-react'
+import { ShoppingCart, Search, Menu, X, Headphones } from 'lucide-react'
 import { useCarrito } from '../context/CarritoContext'
 
 export default function Navbar({ onBuscar }) {
@@ -24,19 +24,14 @@ export default function Navbar({ onBuscar }) {
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center gap-2 flex-shrink-0"
+            className="flex items-center flex-shrink-0"
             onClick={() => { if (onBuscar) onBuscar('') }}
           >
-            <div className="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center shadow-[0_0_12px_rgba(220,38,38,0.5)]">
-              <Zap size={18} className="text-white" fill="white" />
-            </div>
-            <div className="hidden sm:block">
-              <span className="text-white font-bold text-lg leading-none">Cell Shop</span>
-              <span className="text-red-600 font-bold text-lg leading-none"> Tecno+</span>
-            </div>
-            <div className="sm:hidden">
-              <span className="text-white font-bold text-base">CST<span className="text-red-600">+</span></span>
-            </div>
+            <img
+              src="/logo.png"
+              alt="Cell Shop - Servicio Técnico"
+              className="h-10 w-auto object-contain"
+            />
           </Link>
 
           {/* Buscador desktop */}

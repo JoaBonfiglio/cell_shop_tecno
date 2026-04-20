@@ -21,9 +21,11 @@ function Layout({ children, onBuscar }) {
 
             {/* Marca */}
             <div>
-              <p className="text-white font-bold text-base mb-1">
-                Cell Shop <span className="text-red-600">Tecno+</span>
-              </p>
+              <img
+                src="/logo.png"
+                alt="Cell Shop - Servicio Técnico"
+                className="h-14 w-auto object-contain mb-2"
+              />
               <p className="text-gray-500 text-xs leading-relaxed">
                 Servicios técnicos especializados en telefonía móvil e informática. Venta de insumos y accesorios.
               </p>
