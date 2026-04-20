@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "nombre": "Samsung Galaxy A55 5G 256GB",
+    "precio": 450000,
+    "categoria": "celulares",
+    "descripcion": "Smartphone Samsung Galaxy A55 5G con 8GB de RAM, 256GB de almacenamiento, cámara triple de 50MP y pantalla Super AMOLED de 6.6\".",
+    "imagen": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&q=80",
+    "stock": true,
+    "destacado": true
+  },
+  {
+    "id": 2,
+    "nombre": "iPhone 15 128GB Negro",
+    "precio": 780000,
+    "categoria": "celulares",
+    "descripcion": "Apple iPhone 15 con chip A16 Bionic, cámara de 48MP, Dynamic Island y pantalla Super Retina XDR de 6.1\".",
+    "imagen": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=400&q=80",
+    "stock": true,
+    "destacado": true
+  },
+  {
+    "id": 3,
+    "nombre": "Auriculares Bluetooth Sony WH-1000XM5",
+    "precio": 185000,
+    "categoria": "auricular",
+    "descripcion": "Auriculares inalámbricos premium con cancelación activa de ruido líder en la industria, 30hs de batería y sonido Hi-Res.",
+    "imagen": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80",
+    "stock": true,
+    "destacado": true
+  },
+  {
+    "id": 4,
+    "nombre": "Teclado Mecánico Redragon K552 RGB",
+    "precio": 42000,
+    "categoria": "teclados",
+    "descripcion": "Teclado mecánico TKL con switches Cherry MX Red, iluminación RGB personalizable y construcción en aluminio.",
+    "imagen": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400&q=80",
+    "stock": true,
+    "destacado": false
+  },
+  {
+    "id": 5,
+    "nombre": "Mouse Logitech G502 HERO",
+    "precio": 38000,
+    "categoria": "mouse",
+    "descripcion": "Mouse gaming con sensor HERO 25K, 11 botones programables, pesos ajustables y compatibilidad con Logitech G HUB.",
+    "imagen": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=400&q=80",
+    "stock": true,
+    "destacado": false
+  },
+  {
+    "id": 6,
+    "nombre": "Monitor LG 27\" 4K IPS 144Hz",
+    "precio": 320000,
+    "categoria": "monitor",
+    "descripcion": "Monitor LG UltraGear 27GP950-B, resolución 4K UHD, panel Nano IPS, 144Hz, G-SYNC Compatible y HDR600.",
+    "imagen": "https://images.unsplash.com/photo-1585792180666-f7347c490ee2?w=400&q=80",
+    "stock": true,
+    "destacado": true
+  },
+  {
+    "id": 7,
+    "nombre": "Funda iPhone 15 Carbono",
+    "precio": 8500,
+    "categoria": "fundas",
+    "descripcion": "Funda ultra delgada de fibra de carbono para iPhone 15, protección militar, acabado premium y bordes elevados.",
+    "imagen": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=400&q=80",
+    "stock": true,
+    "destacado": false
+  },
+  {
+    "id": 8,
+    "nombre": "Cargador Rápido 65W USB-C",
+    "precio": 18000,
+    "categoria": "cargadores",
+    "descripcion": "Cargador GaN de 65W con tecnología de carga rápida PD 3.0, compatible con notebooks, celulares y tablets.",
+    "imagen": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=400&q=80",
+    "stock": true,
+    "destacado": false
+  },
+  {
+    "id": 9,
+    "nombre": "SSD Samsung 970 EVO Plus 1TB NVMe",
+    "precio": 95000,
+    "categoria": "discos",
+    "descripcion": "Unidad de estado sólido NVMe M.2, velocidades de lectura de 3500MB/s, tecnología V-NAND de 3 bits y garantía de 5 años.",
+    "imagen": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400&q=80",
+    "stock": true,
+    "destacado": false
+  },
+  {
+    "id": 10,
+    "nombre": "Cámara IP TP-Link Tapo C210 3MP",
+    "precio": 28000,
+    "categoria": "camaras de seguridad",
+    "descripcion": "Cámara de seguridad IP WiFi 3MP con visión nocturna, detección de movimiento, audio bidireccional y almacenamiento en nube.",
+    "imagen": "https://images.unsplash.com/photo-1557597774-9d475d030a84?w=400&q=80",
+    "stock": true,
+    "destacado": false
+  },
+  {
+    "id": 11,
+    "nombre": "Memoria RAM DDR5 32GB 5600MHz",
+    "precio": 72000,
+    "categoria": "memoria Ram",
+    "descripcion": "Kit de memoria DDR5 de 32GB (2x16GB) a 5600MHz, latencia CL36, compatible con Intel Alder Lake y AMD Ryzen 7000.",
+    "imagen": "https://images.unsplash.com/photo-1562976540-1502c2145851?w=400&q=80",
+    "stock": true,
+    "destacado": false
+  },
+  {
+    "id": 12,
+    "nombre": "Parlante JBL Flip 6",
+    "precio": 65000,
+    "categoria": "parlantes",
+    "descripcion": "Altavoz portátil Bluetooth con batería de 12 horas, resistencia al agua IP67, sonido potente y graves profundos.",
+    "imagen": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&q=80",
+    "stock": true,
+    "destacado": true
+  },
+  {
+    "id": 13,
+    "nombre": "Consola PlayStation 5 Slim",
+    "precio": 620000,
+    "categoria": "consolas",
+    "descripcion": "PlayStation 5 Slim con SSD de 1TB, retrocompatibilidad con PS4, Ray Tracing y resolución hasta 8K.",
+    "imagen": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=400&q=80",
+    "stock": true,
+    "destacado": true
+  },
+  {
+    "id": 14,
+    "nombre": "Joystick DualSense PS5 Blanco",
+    "precio": 58000,
+    "categoria": "joystick",
+    "descripcion": "Control inalámbrico PS5 con retroalimentación háptica, gatillos adaptables, micrófono integrado y batería recargable.",
+    "imagen": "https://images.unsplash.com/photo-1592840496694-26d035b52b48?w=400&q=80",
+    "stock": true,
+    "destacado": false
+  },
+  {
+    "id": 15,
+    "nombre": "Cable HDMI 2.1 8K 2 metros",
+    "precio": 5500,
+    "categoria": "cables",
+    "descripcion": "Cable HDMI 2.1 de alta velocidad con soporte 8K@60Hz, 4K@120Hz, HDR dinámico y audio eARC.",
+    "imagen": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80",
+    "stock": true,
+    "destacado": false
+  },
+  {
+    "id": 16,
+    "nombre": "Micrófono Blue Yeti USB",
+    "precio": 95000,
+    "categoria": "microfonos",
+    "descripcion": "Micrófono de condensador USB con 4 patrones polares, ideal para streaming, podcasting y grabación profesional.",
+    "imagen": "https://images.unsplash.com/photo-1590602847861-f45433d1fb8e?w=400&q=80",
+    "stock": true,
+    "destacado": false
+  },
+  {
+    "id": 17,
+    "nombre": "Mouse Pad XL Gamer RGB 90x40cm",
+    "precio": 14000,
+    "categoria": "mouse pad",
+    "descripcion": "Alfombrilla gaming extendida con borde cosido, superficie de control optimizada e iluminación RGB perimetral.",
+    "imagen": "https://images.unsplash.com/photo-1616400619175-5beda3a17896?w=400&q=80",
+    "stock": true,
+    "destacado": false
+  },
+  {
+    "id": 18,
+    "nombre": "Gabinete NZXT H510 Flow Negro",
+    "precio": 85000,
+    "categoria": "gabinetes",
+    "descripcion": "Gabinete ATX mid-tower con panel frontal perforado para máximo flujo de aire, ventana de vidrio templado y cable management.",
+    "imagen": "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=400&q=80",
+    "stock": true,
+    "destacado": false
+  },
+  {
+    "id": 19,
+    "nombre": "Adaptador USB-C Hub 7 en 1",
+    "precio": 22000,
+    "categoria": "adaptador",
+    "descripcion": "Hub multipuerto con USB-C PD 100W, HDMI 4K, USB 3.0 x3, lector SD/microSD para notebooks y tablets.",
+    "imagen": "https://images.unsplash.com/photo-1625948515291-3b0f9cb31b62?w=400&q=80",
+    "stock": true,
+    "destacado": false
+  },
+  {
+    "id": 20,
+    "nombre": "Base Refrigerante para Notebook",
+    "precio": 18500,
+    "categoria": "base para notebook",
+    "descripcion": "Base cooling con 5 ventiladores silenciosos, compatible con notebooks de hasta 17\", altura ajustable y hub USB.",
+    "imagen": "https://images.unsplash.com/photo-1527443224154-c4a573d5e346?w=400&q=80",
+    "stock": true,
+    "destacado": false
+  },
+  {
+    "id": 22,
+    "nombre": "Placa de Video RTX 4060 8GB",
+    "precio": 385000,
+    "categoria": "placas",
+    "descripcion": "NVIDIA GeForce RTX 4060 8GB GDDR6, arquitectura Ada Lovelace, DLSS 3, Ray Tracing y Frame Generation.",
+    "imagen": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=400&q=80",
+    "stock": true,
+    "destacado": true
+  },
+  {
+    "id": 23,
+    "nombre": "Cartucho HP 664XL Negro",
+    "precio": 7200,
+    "categoria": "cartuchos",
+    "descripcion": "Cartucho de tinta HP 664XL de alta capacidad, para impresoras HP DeskJet, con hasta 480 páginas de impresión.",
+    "imagen": "https://images.unsplash.com/photo-1612198537235-1c94cb53d3b7?w=400&q=80",
+    "stock": true,
+    "destacado": false
+  },
+  {
+    "id": 24,
+    "nombre": "Kit de Limpieza para PC y Periféricos",
+    "precio": 9500,
+    "categoria": "limpieza y mantenimiento",
+    "descripcion": "Kit profesional con spray limpiador, paños de microfibra, cepillos anti-estáticos y aire comprimido.",
+    "imagen": "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=400&q=80",
+    "stock": true,
+    "destacado": false
+  },
+  {
+    "id": 25,
+    "nombre": "Tira LED RGB Govee 5 metros",
+    "precio": 16000,
+    "categoria": "iluminacion",
+    "descripcion": "Tira LED inteligente con control por app, compatible con Alexa y Google Home, 16 millones de colores.",
+    "imagen": "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=400&q=80",
+    "stock": true,
+    "destacado": false
+  },
+  {
+    "id": 26,
+    "nombre": "Accesorios PS5 Bundle - 2 Mandos + Soporte",
+    "precio": 95000,
+    "categoria": "accesorios",
+    "descripcion": "Bundle completo PS5: 2 controles DualSense, soporte vertical y horizontal, base de carga y headset gaming.",
+    "imagen": "https://images.unsplash.com/photo-1593118247619-e2d6f056869e?w=400&q=80",
+    "stock": true,
+    "destacado": false
+  }
+]
