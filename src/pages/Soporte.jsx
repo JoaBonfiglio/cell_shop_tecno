@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import {
   Search,
   Wrench,
@@ -17,6 +17,7 @@ import {
   CheckCircle,
   ArrowRight,
   MapPin,
+  X,
 } from 'lucide-react'
 
 const FAQS = [
@@ -88,6 +89,7 @@ const SERVICIOS = [
 export default function Soporte() {
   const [busqueda, setBusqueda] = useState('')
   const [abierto, setAbierto] = useState(null)
+  const faqsRef = useRef(null)
 
   const faqsFiltradas = FAQS.filter(
     (faq) =>
@@ -96,6 +98,20 @@ export default function Soporte() {
       faq.respuesta.toLowerCase().includes(busqueda.toLowerCase()) ||
       faq.categoria.toLowerCase().includes(busqueda.toLowerCase())
   )
+
+  const handleBusqueda = (e) => {
+    setBusqueda(e.target.value)
+    setAbierto(null)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (busqueda.trim() && faqsRef.current) {
+      setTimeout(() => {
+        faqsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 50)
+    }
+  }
 
   const NUMERO_WA = '5492984355384'
   const mensajeSoporte = encodeURIComponent('Hola Cell Shop Tecno+! Necesito asistencia técnica con mi equipo.')
@@ -123,16 +139,47 @@ export default function Soporte() {
           </p>
 
           {/* Buscador de ayuda */}
-          <div className="relative max-w-lg mx-auto">
-            <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" />
-            <input
-              type="text"
-              value={busqueda}
-              onChange={(e) => setBusqueda(e.target.value)}
-              placeholder="¿Qué problema tenés? Ej: pantalla rota, batería..."
-              className="input-search pl-12 py-4 text-base"
-            />
-          </div>
+          <form onSubmit={handleSubmit} className="relative max-w-lg mx-auto flex gap-2">
+            <div className="relative flex-1">
+              <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" />
+              <input
+                type="text"
+                value={busqueda}
+                onChange={handleBusqueda}
+                placeholder="¿Qué problema tenés? Ej: pantalla rota, batería, PS5..."
+                className="input-search pl-12 pr-10 py-4 text-base"
+              />
+              {busqueda && (
+                <button
+                  type="button"
+                  onClick={() => { setBusqueda(''); setAbierto(null) }}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition-colors"
+                  aria-label="Limpiar búsqueda"
+                >
+                  <X size={16} />
+                </button>
+              )}
+            </div>
+            <button
+              type="submit"
+              className="btn-primary px-5 py-4 text-sm flex-shrink-0"
+            >
+              Buscar
+            </button>
+          </form>
+
+          {/* Feedback de resultados */}
+          {busqueda.trim() && (
+            <p className="mt-3 text-sm font-medium">
+              {faqsFiltradas.length > 0 ? (
+                <span className="text-green-400">
+                  {faqsFiltradas.length} resultado{faqsFiltradas.length !== 1 ? 's' : ''} encontrado{faqsFiltradas.length !== 1 ? 's' : ''} — mirá abajo
+                </span>
+              ) : (
+                <span className="text-red-400">Sin resultados para "{busqueda}"</span>
+              )}
+            </p>
+          )}
         </div>
       </section>
 
@@ -180,17 +227,32 @@ export default function Soporte() {
       </section>
 
       {/* FAQs */}
-      <section>
+      <section ref={faqsRef}>
         <div className="flex items-center gap-3 mb-5">
           <h2 className="text-white font-bold text-xl">Preguntas Frecuentes</h2>
           <span className="text-gray-600 text-sm">({faqsFiltradas.length})</span>
         </div>
 
         {faqsFiltradas.length === 0 ? (
-          <div className="bg-dark-800 border border-dark-700 rounded-xl p-8 text-center">
-            <AlertCircle size={32} className="text-gray-600 mx-auto mb-3" />
-            <p className="text-gray-400 font-medium mb-1">No encontramos resultados</p>
-            <p className="text-gray-600 text-sm">Intentá con otras palabras o escribinos directamente.</p>
+          <div className="bg-dark-800 border-2 border-red-600/40 rounded-xl p-8 text-center shadow-[0_0_20px_rgba(220,38,38,0.1)]">
+            <div className="w-16 h-16 bg-red-600/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <AlertCircle size={32} className="text-red-500" />
+            </div>
+            <p className="text-white font-bold text-lg mb-1">
+              No hay resultados para "{busqueda}"
+            </p>
+            <p className="text-gray-400 text-sm mb-5">
+              Intentá con otras palabras como "pantalla", "batería", "PS5" o "garantía".
+            </p>
+            <a
+              href={linkWhatsApp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold px-5 py-3 rounded-xl text-sm transition-all"
+            >
+              <MessageCircle size={16} />
+              Consultanos por WhatsApp
+            </a>
           </div>
         ) : (
           <div className="space-y-2">

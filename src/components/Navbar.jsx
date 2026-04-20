@@ -19,7 +19,7 @@ export default function Navbar({ onBuscar }) {
   return (
     <header className="sticky top-0 z-50 bg-dark-900 border-b border-dark-700 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-32">
 
           {/* Logo */}
           <Link
@@ -30,7 +30,7 @@ export default function Navbar({ onBuscar }) {
             <img
               src="/logo.png"
               alt="Cell Shop - Servicio Técnico"
-              className="h-10 w-auto object-contain"
+              className="h-28 w-auto object-contain"
             />
           </Link>
 
