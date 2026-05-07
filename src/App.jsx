@@ -6,26 +6,24 @@ import Navbar from './components/Navbar'
 import Catalogo from './components/Catalogo'
 import Carrito from './components/Carrito'
 import Soporte from './pages/Soporte'
+import Toast from './components/Toast'
+import BottomNav from './components/BottomNav'
 
 function Layout({ children, onBuscar }) {
   return (
     <div className="min-h-screen bg-dark-900 flex flex-col">
       <Navbar onBuscar={onBuscar} />
-      <main className="flex-1">
+      <main className="flex-1 pb-[60px] md:pb-0">
         {children}
       </main>
       <Carrito />
-      <footer className="border-t border-dark-700 pt-8 pb-6 px-4 mt-10">
+      <footer className="border-t border-dark-700 pt-8 pb-6 px-4 mt-10 mb-[60px] md:mb-0">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
 
             {/* Marca */}
             <div>
-              <img
-                src="/logo.png"
-                alt="Cell Shop - Servicio Técnico"
-                className="h-14 w-auto object-contain mb-2"
-              />
+              <img src="/logo.png" alt="Cell Shop - Servicio Técnico" className="h-14 w-auto object-contain mb-2" />
               <p className="text-gray-500 text-xs leading-relaxed">
                 Servicios técnicos especializados en telefonía móvil e informática. Venta de insumos y accesorios.
               </p>
@@ -35,10 +33,7 @@ function Layout({ children, onBuscar }) {
             <div>
               <p className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">Contacto</p>
               <div className="space-y-1.5">
-                <a
-                  href="tel:+5492984355384"
-                  className="flex items-center gap-2 text-gray-400 hover:text-white text-xs transition-colors group"
-                >
+                <a href="tel:+5492984355384" className="flex items-center gap-2 text-gray-400 hover:text-white text-xs transition-colors">
                   <Phone size={12} className="text-red-500 flex-shrink-0" />
                   <span>0298 435-5384</span>
                 </a>
@@ -86,7 +81,6 @@ function Layout({ children, onBuscar }) {
 
 function Home() {
   const [busqueda, setBusqueda] = useState('')
-
   return (
     <Layout onBuscar={setBusqueda}>
       <Catalogo busqueda={busqueda} />
@@ -106,11 +100,13 @@ export default function App() {
   return (
     <BrowserRouter>
       <CarritoProvider>
+        <Toast />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/soporte" element={<SoportePage />} />
           <Route path="*" element={<Home />} />
         </Routes>
+        <BottomNav />
       </CarritoProvider>
     </BrowserRouter>
   )
